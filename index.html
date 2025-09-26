@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Act 3</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+    /* Header */
+    header {
+      background-color: deeppink;
+      text-align: center;
+      margin-bottom: 50px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    header p {
+      font-family: "Bebas Neue"
+      font-size: 120px;
+      color: white;
+      margin: 0;
+    }
+
+    /* Rectángulos negros */
+    .rectangulo {
+      width: 90%;
+      background-color: black;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .rectangulo span {
+      color: hotpink;
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Contenedor recuadro rosa + texto */
+    .contenedor-hipertexto {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin: 20px 40px;
+    }
+
+    /* Recuadro rosa */
+    .recuadro-rosa {
+      width: 300px;
+      height: 200px;
+      background-color: deeppink;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Título dentro del recuadro */
+    .titulo-recuadro {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 50px;
+      color: black;
+      margin: 0;
+      text-align: center;
+    }
+
+    /* Texto */
+    .texto-explicativo {
+      max-width: 800px;
+    }
+    .texto-explicativo p {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      text-align: justify;
+      margin: 0;
+    }
+
+    /* (Actividad, Shortcuts, Figma, Diagramas) */
+    .contenedor-secciones {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    /* titulo y contenido */
+    .seccion {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    /* Recuadro negro */
+    .recuadro-actividad {
+      background-color: black;
+      width: 500px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 35px;
+      color: white;
+      padding-left: 15px;
+    }
+
+    /* Recuadro rosa */
+    .recuadro-shortcuts {
+      background-color: deeppink;
+      width: 500px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 35px;
+      color: white;
+      padding-left: 0;
+    }
+
+    /* Imagenes */
+    .seccion img {
+      margin-top: 10px;
+      object-fit: cover;
+    }
+
+    /* Ajustes de tamaño */
+    .img-actividad, .img-shortcuts {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+    .img-figma, .img-diagrama {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+
+    /* Recuadro negro letras rosas */
+    .recuadro-negro {
+      background-color: black;
+      width: 500px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 35px;
+      color: hotpink;
+      border-radius: 5px;
+    }
+
+    /* Recuadro con degradado rosa */
+    .recuadro-rosa-bocetos {
+      background: linear-gradient(90deg, hotpink, deeppink);
+      width: 500px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 35px;
+      color: black;
+      border-radius: 5px;
+      margin: 0 auto;
+    }
+
+    /* Recuadro rosa Joan Acosta */
+    .recuadro-rosa-joan {
+      background-color: deeppink;
+      width: 500px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 35px;
+      color: black;
+      border-radius: 5px;
+      margin: 0 auto;
+    }
+
+    /* Imagen Joan Acosta */
+    .img-joan {
+      border-radius: 15px;       
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      max-width: 100%;           
+      height: auto;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      padding: 20px 0;
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .footer-container p {
+      margin: 0;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p>BITÁCORA</p>
+  </header> 
+
+  <!-- Rectangulo negro con datos -->
+  <div class="rectangulo">
+    <span><strong>Nombre:</strong> Victoria Payán García</span>
+    <span><strong>Matrícula:</strong> 215662</span>
+    <span><strong>Materia:</strong> Diseño Web</span>
+    <span><strong>Grupo:</strong> BL1</span>
+    <span><strong>Fecha:</strong> 10/09/25</span>
+  </div>
+
+  <!-- Segundo rectangulo -->
+  <div class="rectangulo">
+    <span><strong>ANTECEDENTES DEL DISEÑO WEB</strong></span>
+  </div>
+
+  <!-- Hipertexto -->
+  <div class="contenedor-hipertexto">
+    <div class="recuadro-rosa">
+      <p class="titulo-recuadro">Hipertexto</p>
+    </div>
+    <div class="texto">
+      <p>
+        El hipertexto es texto que contiene enlaces a otros textos, tratandose asi de una estructura no secuencial 
+        que permite crear, agregar, enlazar y compartir informacion de diversas fuentes por medio de enlaces asociativos 
+        y redes sociales. Si el usuario selecciona un hipervinculo, el programa muestra el documento enlazado.
+      </p>
+    </div>
+  </div>
+
+  <!-- Prototipado -->
+  <div class="contenedor-hipertexto">
+    <div class="recuadro-rosa">
+      <p class="titulo-recuadro">Prototipado</p>
+    </div>
+    <div class="texto">
+      <p>
+        Se define como una tecnica industrial en donde se crea un modelo tomando como referencia un producto 
+        para analizar su funcionalidad una vez este materializado. Se trata de un proceso planificado en el que 
+        se toman en cuenta distintos factores para determinar la utilidad y eficacia de un artículo. 
+        Esto se efectúa antes de que llegue a la fase de produccion final.
+      </p>
+    </div>
+  </div>
+
+  <!-- UX -->
+  <div class="contenedor-hipertexto">
+    <div class="recuadro-rosa">
+      <p class="titulo-recuadro">UX</p>
+    </div>
+    <div class="texto">
+      <p>
+        UX (User Experience o Experiencia de Usuario) se refiere a la percepcion y respuesta 
+        que tiene una persona al interactuar con un producto, sistema o servicio. 
+        Incluye aspectos de usabilidad, accesibilidad y diseño que buscan garantizar 
+        que la experiencia sea eficiente, satisfactoria y significativa para el usuario.
+      </p>
+    </div>
+  </div>
+
+  <!-- rectangulos y imagenes -->
+  <div class="contenedor-secciones">
+    <!-- Actividad -->
+    <div class="seccion">
+      <div class="recuadro-actividad">Actividad</div>
+      <img src="img/Conceptos.jpg" alt="Imagen Actividad" class="img-actividad">
+    </div>
+
+    <!-- Shortcuts -->
+    <div class="seccion">
+      <div class="recuadro-shortcuts">Shortcuts</div>
+      <img src="img/ShortcutsMac.png" alt="Imagen Shortcuts" class="img-shortcuts">
+    </div>
+  </div>
+
+  <!-- Figma -->
+  <div class="seccion">
+    <div class="recuadro-shortcuts">Figma</div>
+    <img src="img/figma.png" alt="Imagen Figma" class="img-figma">
+  </div>
+
+  <!-- Diagrama de Arquitectura -->
+  <div class="seccion">
+    <div class="recuadro-shortcuts">Diagrama de Arquitectura de pagina web</div>
+    <img src="img/SHEIN.jpg" alt="Diagrama Arquitectura" class="img-diagrama">
+  </div>
+
+  <!-- Diagrama de flujo -->
+  <div class="seccion">
+    <div class="recuadro-shortcuts">Diagrama de flujo</div>
+  </div>
+	
+  <!-- Imagen centrada  -->
+  <div class="seccion">
+    <img src="img/Cuadro.jpg" alt="Imagen nueva centrada" 
+         style="max-width: 1000px; height: auto; object-fit: cover;">
+  </div>
+	
+  <div class="rectangulo">
+    <span><strong>Tema de la IA</strong></span>
+  </div>
+	
+  <!-- Contenedor imágenes lado a lado -->
+  <div class="contenedor-secciones" style="justify-content: center; gap: 20px; flex-wrap: wrap;">
+    <img src="img/FlowChart.png" alt="Imagen 1" style="object-fit: cover;">
+    <img src="img/RevistaIA.png" alt="Imagen 2" style="object-fit: cover;">
+  </div>
+	
+  <!-- Texto  debajo -->
+  <div class="contenedor-hipertexto" style="justify-content: center; margin-top: 20px;">
+    <div class="texto-explicativo" style="max-width: 800px; text-align: justify;">
+      <p>
+        Nuestro equipo llego a la conclusion de que la Inteligencia Artificial no puede ser una artista, ni puede reemplazarnos como diseñadores graficos porque nosotros como humanos, comprendemos emociones, cultura, tendencias y significados que una IA no siempre puede captar y que no logra transmitir. Podemos usar y adaptarnos a la Inteligencia Artificial como una herramienta, pero nunca podra hacer en su totalidad el trabajo de un artista o de un diseñador.
+      </p>
+    </div>
+  </div>
+	
+  <div class="rectangulo">
+    <span><strong>Diagrama estructura</strong></span>
+  </div>
+  <img src="img/Diagrama.jpg" alt="Imagen diagrama" style="justify-content: center; max-width: 1000px; height: auto; object-fit: cover;">
+
+  <!-- NUEVA SECCIÓN: 3 imágenes seguidas -->
+  <div class="seccion">
+    <div class="recuadro-rosa-bocetos">BOCETOS</div>
+    <div class="contenedor-secciones" style="justify-content: center; gap: 20px; flex-wrap: wrap;">
+      <img src="img/Boceto 1.jpeg" alt="Imagen 1" style="max-width: 400px; height: auto; object-fit: cover;">
+      <img src="img/boceto 2.jpeg" alt="Imagen 2" style="max-width: 400px; height: auto; object-fit: cover;">
+      <img src="img/boceto 3.jpeg" alt="Imagen 3" style="max-width: 400px; height: auto; object-fit: cover;">
+    </div>
+  </div>
+
+  <!-- NUEVA SECCIÓN: Recuadro negro con letras rosas -->
+  <div class="seccion">
+    <div class="recuadro-negro">BOCETOS FINOS</div>
+    <div class="contenedor-secciones" style="justify-content: center; gap: 20px; flex-wrap: wrap;">
+      <img src="img/1.jpg" alt="Imagen 1" style="object-fit: cover;">
+      <img src="img/2.jpg" alt="Imagen 2" style="object-fit: cover;">
+    </div>
+  </div>
+
+  <!-- NUEVA SECCIÓN GRAFICO DE JOAN ACOSTA -->
+  <div class="seccion">
+    <div class="recuadro-rosa-joan">GRAFICO DE JOAN ACOSTA</div>
+    <div style="text-align: center; margin-top: 20px;">
+      <img src="img/Grafico.png" alt="Gráfico de Joan Acosta" class="img-joan">
+    </div>
+  </div>
+	
+  <footer>
+    <div class="footer-container">
+      <p>2025 Mi Sitio Web | Todos los derechos reservados</p>
+      <div class="footer-icons">
+        <i data-feather="instagram"></i>
+        <i data-feather="facebook"></i>
+        <i data-feather="mail"></i>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
